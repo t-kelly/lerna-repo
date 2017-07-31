@@ -1,5 +1,10 @@
 {
+	"scripts": {
+		"publish": "node_modules/.bin/lerna publish",
+		"changelog": "node_modules/.bin/lerna-changelog"
+	},
 	"devDependencies": {
-		"lerna": "^2.0.0"
+		"lerna": "^2.0.0",
+		"lerna-changelog": "^0.6.0"
 	}
 }
