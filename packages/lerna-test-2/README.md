@@ -1,0 +1,1 @@
+## Lerna test project 2 now has a README
