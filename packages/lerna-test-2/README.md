@@ -1,1 +1,3 @@
-## Lerna test project 2 now has a README
+## Lerna Test Project 2
+
+This README has been updated from the first version
