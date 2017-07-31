@@ -1,3 +1,12 @@
+## v0.5.0 (2017-07-31)
+
+#### :rocket: Enhancement
+* `lerna-test-1`
+  * [#4](https://github.com/t-kelly/lerna-repo/pull/4) Add hello world. ([@t-kelly](https://github.com/t-kelly))
+
+#### Committers: 1
+- Thomas Kelly ([t-kelly](https://github.com/t-kelly))
+
 ## v0.4.0 (2017-07-31)
 
 #### :rocket: Enhancement
