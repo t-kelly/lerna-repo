@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"publish": "node_modules/.bin/lerna publish",
+		"publish": "node_modules/.bin/lerna publish && echo 'POOPDINK'",
 		"changelog": "node_modules/.bin/lerna-changelog"
 	},
 	"devDependencies": {
