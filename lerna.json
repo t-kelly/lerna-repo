@@ -5,6 +5,10 @@
   ],
   "version": "0.2.0",
   "changelog": {
+    "repo": "t-kelly/lerna-repo",
+    "labels": {
+      "enhancement": ":rocket: Enhancement"
+    },
     "cacheDir": ".changelog"
   }
 }
