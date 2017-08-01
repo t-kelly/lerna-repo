@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"publish": "node_modules/.bin/lerna publish && node ",
+		"publish": "node_modules/.bin/lerna publish && node tasks/publish",
 		"changelog": "node_modules/.bin/lerna-changelog"
 	},
 	"devDependencies": {

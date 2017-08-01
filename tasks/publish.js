@@ -1,12 +1,17 @@
-var shell = require('shelljs');
+var shell, spawn, tty;
+spawn = require('child_process').spawn;
+tty = require('tty');
 
-if (!shell.which('git')) {
-  shell.echo('Sorry, this script requires git');
-  shell.exit(1);
-}
+shell = function(cmd, opts) {
+  var p;
+  process.stdin.pause();
+  p = spawn(cmd, opts, {
+    customFds: [0, 1, 2]
+  });
+  return p.on('exit', function() {
+    process.stdin.resume();
+    return process.stdin.write("\x04");
+  });
+};
 
-// Run external tool synchronously
-if (shell.exec('node_modules/.bin/lerna publish').code !== 0) {
-  shell.echo('Error: Git commit failed');
-  shell.exit(1);
-}
+shell('lerna', ['publish']);
