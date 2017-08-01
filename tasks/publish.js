@@ -4,18 +4,19 @@ tty = require('tty');
 shell = function(cmd, opts, callback) {
    var p;
    process.stdin.pause();
-   tty.setRawMode(false);
-
+  //  tty.ReadStream.setRawMode(false);
 
    p = spawn(cmd, opts, {
-     customFds: [0, 1, 2]
+     stdio: 'inherit'
    });
-   return p.on('exit', function() {
-     tty.setRawMode(true);
+   return p.on('exit', function(code) {
+    //  tty.ReadStream.setRawMode(true);
      process.stdin.resume();
-     return callback();
+     return callback(code);
    });
 };
-shell('lerna', ['publish'], function() {
+
+shell('lerna', ['publish'], function(code) {
+  console.log(code);
    return process.exit();
 });
